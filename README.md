@@ -51,7 +51,6 @@ Planning is really important! We did not have time to plan and planned on the fi
 We would love to continue working on this product to make it a fully furnished platform. There is definitely a lot of potential for this platform to be used by Warrior Wives in many different locations, helping them change their lives for the better.
 
 ## Team Members
-----
 ### [Daniel Yuen](https://github.com/danielyuenhx)
 
 ### [Nicholas Farm](https://github.com/nickfarm27)
