@@ -1,10 +1,16 @@
-"use client"
+"use client";
 
 import React from "react";
-import EventCard from "../components/eventCard";
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Heading } from "@chakra-ui/react";
-import LongEventCard from "../components/longEventCard";
-import { events } from "../../../content";
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  Heading,
+} from "@chakra-ui/react";
+import LongEventCard from "../../components/longEventCard";
+import { events } from "../../../../content";
 
 function getAllUniqueInterests(events) {
   const uniqueInterests = new Set();
@@ -18,7 +24,7 @@ function getAllUniqueInterests(events) {
   return uniqueInterestsArray;
 }
 
-export default function Events() {
+export default function GroupEvents() {
   const uniqueInterests = getAllUniqueInterests(events);
 
   return (
