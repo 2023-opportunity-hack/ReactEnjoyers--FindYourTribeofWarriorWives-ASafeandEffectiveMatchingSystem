@@ -280,6 +280,10 @@ const NAV_ITEMS = [
     // ],
   },
   {
+    label: "My Groups",
+    href: "/groups",
+  },
+  {
     label: "About Us",
     href: "#",
     // children: [

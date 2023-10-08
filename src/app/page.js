@@ -8,9 +8,12 @@ import {
   Flex,
   InputLeftElement,
   Divider,
+  Center,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import Carousel from "./Carousel";
+import GroupCard from "./components/groupCard";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -33,56 +36,90 @@ export default function Home() {
   };
 
   return (
-    <Box>
-      <Flex flexDir={"column"} gap='1rem' paddingX='10rem' marginBottom='1rem'>
-        <Text>
-          Your location: <b>Missouri</b>
-        </Text>
-        <InputGroup size='md'>
-          <Input
-            value={input}
-            placeholder='Search for groups...'
-            onChange={handleInputChange}
-          />
-          <InputLeftElement>
-            <SearchIcon></SearchIcon>
-          </InputLeftElement>
-        </InputGroup>
-        {input && (
-          <Box
-            border={"1px #CBD5E075 solid"}
-            w='full'
-            borderRadius='0 0 5px 5px'
-            marginTop='-1rem'
-          >
-            {groups.map((g) => (
-              <>
-                <Box paddingX={"1rem"} paddingY={"0.5rem"} cursor={"pointer"}>
-                  {g.name} Warrior Wives of {g.location}
-                </Box>
-                <Divider />
-              </>
-            ))}
-          </Box>
-        )}
-        <Text heading fontSize={"2rem"} color='gray.800' marginTop='1rem'>
-          Recommended groups near you
-        </Text>
-      </Flex>
-      <Carousel groups={RECOMMENDED_LOCAL_GROUPS} />
-      <Flex
-        flexDir={"column"}
-        gap='1rem'
-        paddingX='10rem'
-        marginTop='2rem'
-        marginBottom='1rem'
-      >
-        <Text heading fontSize={"2rem"} color='gray.800'>
-          Recommended online groups for you
-        </Text>
-      </Flex>
-      <Carousel groups={RECOMMENDED_ONLINE_GROUPS} />
-    </Box>
+    <>
+      <Box>
+        <Flex
+          flexDir={"column"}
+          gap="1rem"
+          paddingX="10rem"
+          marginBottom="1rem"
+        >
+          <Text>
+            Your location: <b>Missouri</b>
+          </Text>
+          <InputGroup size="md">
+            <Input
+              value={input}
+              placeholder="Search for groups..."
+              onChange={handleInputChange}
+            />
+            <InputLeftElement>
+              <SearchIcon></SearchIcon>
+            </InputLeftElement>
+          </InputGroup>
+          {input && (
+            <Box
+              border={"1px #CBD5E075 solid"}
+              w="full"
+              borderRadius="0 0 5px 5px"
+              marginTop="-1rem"
+            >
+              {groups.map((g) => (
+                <>
+                  <Box paddingX={"1rem"} paddingY={"0.5rem"} cursor={"pointer"}>
+                    {g.name} Warrior Wives of {g.location}
+                  </Box>
+                  <Divider />
+                </>
+              ))}
+            </Box>
+          )}
+          <Text heading fontSize={"2rem"} color="gray.800" marginTop="1rem">
+            Recommended groups near you
+          </Text>
+        </Flex>
+        <Carousel groups={RECOMMENDED_LOCAL_GROUPS} />
+        <Flex
+          flexDir={"column"}
+          gap="1rem"
+          paddingX="10rem"
+          marginTop="2rem"
+          marginBottom="1rem"
+        >
+          <Text heading fontSize={"2rem"} color="gray.800">
+            Recommended online groups for you
+          </Text>
+        </Flex>
+        <Carousel groups={RECOMMENDED_ONLINE_GROUPS} />
+        <Flex
+          flexDir={"column"}
+          gap="1rem"
+          paddingX="10rem"
+          marginTop="2rem"
+          marginBottom="1rem"
+        >
+          <Text heading fontSize={"2rem"} color="gray.800">
+            All groups
+          </Text>
+        </Flex>
+      </Box>
+      <Center bg="bg-slate-100 pt-10 pb-10">
+        <SimpleGrid columns={4} spacing={10}>
+          {[...RECOMMENDED_LOCAL_GROUPS, ...RECOMMENDED_ONLINE_GROUPS].map(
+            (group) => (
+              <GroupCard
+                name={group.name}
+                location={group.location}
+                tags={group.tags}
+                description={group.description}
+                bg={group.bg}
+                key={group.name}
+              />
+            )
+          )}
+        </SimpleGrid>
+      </Center>
+    </>
   );
 }
 
