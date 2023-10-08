@@ -30,30 +30,13 @@ export default function GroupEvents() {
 
   return (
     <div className="max-w-[1200px] m-auto">
-      <Text heading fontSize={"2rem"} color="gray.800">
-        Explore events near you
+      <Text heading fontSize={"2rem"} color="gray.800" pb="10">
+        Events Joined
       </Text>
 
-      {uniqueInterests.map((uniqueInterests) => {
-        return (
-          <div className="flex flex-col gap-4">
-            {events
-              .filter((event) => event.interest === uniqueInterests)
-              .map((event) => {
-                return <LongEventCard key={event.id} event={event} />;
-              })}
-          </div>
-        );
+      {events.map((event) => {
+        return <LongEventCard key={event.id} event={event} />;
       })}
-      {/* <Tabs variant="soft-rounded" colorScheme="orange">
-        <TabList>
-          {uniqueInterests.map((interest) => {
-            return <Tab>{interest}</Tab>;
-          })}
-        </TabList>
-        <TabPanels>
-        </TabPanels>
-      </Tabs> */}
     </div>
   );
 }
