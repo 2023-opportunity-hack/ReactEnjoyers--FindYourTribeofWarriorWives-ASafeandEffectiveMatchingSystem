@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ChakraProvider } from "@chakra-ui/react";
+import NavBar from "./components/navBar";
+import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning={true}>
       <body className={inter.className}>
-        <ChakraProvider>{children}</ChakraProvider>
+        <ChakraProvider>
+          <NavBar />
+          <div className="bg-slate-100 pt-20 pb-20">{children}</div>
+          <Footer />
+        </ChakraProvider>
       </body>
     </html>
   );
