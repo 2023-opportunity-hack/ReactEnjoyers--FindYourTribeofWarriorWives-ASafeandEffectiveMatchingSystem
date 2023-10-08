@@ -41,7 +41,7 @@ export default function Home() {
         <Flex
           flexDir={"column"}
           gap="1rem"
-          paddingX="10rem"
+          paddingX="15rem"
           marginBottom="1rem"
         >
           <Text>
@@ -83,7 +83,7 @@ export default function Home() {
         <Flex
           flexDir={"column"}
           gap="1rem"
-          paddingX="10rem"
+          paddingX="15rem"
           marginTop="2rem"
           marginBottom="1rem"
         >
@@ -95,7 +95,7 @@ export default function Home() {
         <Flex
           flexDir={"column"}
           gap="1rem"
-          paddingX="10rem"
+          paddingX="15rem"
           marginTop="2rem"
           marginBottom="1rem"
         >
@@ -104,8 +104,8 @@ export default function Home() {
           </Text>
         </Flex>
       </Box>
-      <Center bg="bg-slate-100 pt-10 pb-10">
-        <SimpleGrid columns={4} spacing={10}>
+      <Center bg="bg-slate-100" >
+        <SimpleGrid columns={3} spacing={10}>
           {[...RECOMMENDED_LOCAL_GROUPS, ...RECOMMENDED_ONLINE_GROUPS].map(
             (group) => (
               <GroupCard
@@ -169,8 +169,8 @@ const RECOMMENDED_ONLINE_GROUPS = [
     tags: [
       { name: "Hiking", color: "red" },
       { name: "Painting", color: "green" },
-      { name: "Online Gaming", color: "green" },
-      { name: "Book Club", color: "green" },
+      { name: "Gaming", color: "green" },
+      { name: "Reading", color: "green" },
     ],
     description:
       "Midwest Marine Corps spouses, discover the great outdoors with our hiking and painting enthusiasts. Join us for gaming and book club fun!",

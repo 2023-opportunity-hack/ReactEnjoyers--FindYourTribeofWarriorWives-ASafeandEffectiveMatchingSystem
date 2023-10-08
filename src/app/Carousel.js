@@ -25,8 +25,8 @@ export default function Carousel({ groups }) {
                 opacity={0.7}
               />
               <Box
-                paddingX={"5rem"}
-                paddingY={"3rem"}
+                paddingX={"12rem"}
+                paddingY={"5rem"}
                 position='relative'
                 zIndex={1}
               >
