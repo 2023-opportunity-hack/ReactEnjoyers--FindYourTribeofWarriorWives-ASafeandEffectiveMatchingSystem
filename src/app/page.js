@@ -78,6 +78,7 @@ const RECOMMENDED_LOCAL_GROUPS = [
 
 const RECOMMENDED_ONLINE_GROUPS = [
   {
+    online: true,
     service: "Marine Corps",
     location: "Midwest",
     tags: [
@@ -92,6 +93,7 @@ const RECOMMENDED_ONLINE_GROUPS = [
     bg: "https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/couple-hiking-mountain-climbing-1296x728-header.jpg?w=1155&h=1528",
   },
   {
+    online: true,
     service: "Navy",
     location: "West Coast",
     tags: [

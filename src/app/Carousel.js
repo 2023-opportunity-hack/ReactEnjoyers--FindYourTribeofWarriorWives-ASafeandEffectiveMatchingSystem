@@ -6,7 +6,7 @@ export default function Carousel({ groups }) {
   const [emblaRef] = useEmblaCarousel({ loop: true });
   return (
     <Box overflow={"hidden"} ref={emblaRef}>
-      <Flex h={"25rem"}>
+      <Flex h={"30rem"}>
         {groups.map((g) => (
           <>
             <Box
@@ -30,6 +30,7 @@ export default function Carousel({ groups }) {
                 position='relative'
                 zIndex={1}
               >
+                {g.online && <Tag colorScheme="blue">Online Only</Tag>}
                 <Text
                   heading
                   fontWeight={"bold"}
@@ -48,10 +49,10 @@ export default function Carousel({ groups }) {
                 <Text
                   subheading
                   color='white'
-                  marginTop="1rem"
+                  marginTop='1rem'
                 >{`${g.description}`}</Text>
                 <Box marginTop={"1rem"}>
-                  <Button size="sm">View Group</Button>
+                  <Button size='sm'>View Group</Button>
                 </Box>
               </Box>
             </Box>
