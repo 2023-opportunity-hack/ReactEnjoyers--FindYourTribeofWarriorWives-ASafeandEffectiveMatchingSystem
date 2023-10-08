@@ -22,6 +22,7 @@ export default function LongEventCard(props) {
         direction={{ base: "column", sm: "row" }}
         overflow="hidden"
         variant="outline"
+        mb={6}
       >
         <Image
           objectFit="cover"

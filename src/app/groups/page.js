@@ -1,10 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Center,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Center, SimpleGrid, Text } from "@chakra-ui/react";
 import GroupCard from "../components/groupCard";
 
 const GROUPS_JOINED = [
@@ -47,19 +44,26 @@ const GROUPS_JOINED = [
 
 export default function Groups() {
   return (
-    <Center bg='bg-slate-100 pt-10 pb-10'>
-    <SimpleGrid columns={4} spacing={10}>
-      {GROUPS_JOINED.map((group) => (
-        <GroupCard
-          name={group.name}
-          location={group.location}
-          tags={group.tags}
-          description={group.description}
-          bg={group.bg}
-          key={group.name}
-        />
-      ))}
-    </SimpleGrid>
-    </Center>
+    <>
+      <div className="max-w-[1200px] m-auto">
+        <Text heading fontSize={"2rem"} color="gray.800" pb="10">
+          My Groups
+        </Text>
+      </div>
+      <Center bg="bg-slate-100 pt-10 pb-10">
+        <SimpleGrid columns={3} spacing={10}>
+          {GROUPS_JOINED.map((group) => (
+            <GroupCard
+              name={group.name}
+              location={group.location}
+              tags={group.tags}
+              description={group.description}
+              bg={group.bg}
+              key={group.name}
+            />
+          ))}
+        </SimpleGrid>
+      </Center>
+    </>
   );
 }
