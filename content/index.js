@@ -1,90 +1,102 @@
 export const events = [
   {
-    id: "event1",
-    title: "Event 1",
+    id: 1,
+    title: "Deployment Support Group Meeting",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    interest: "Army",
-    location: "Texas",
-    time: "8PM Saturday, 7th October 2023",
-    longDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  },
-  {
-    id: "event2",
-    title: "Event 2",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    interest: "Religion",
-    location: "Texas",
-    time: "8PM Saturday, 7th October 2023",
-    longDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  },
-  {
-    id: "event3",
-    title: "Event 3",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    interest: "Army",
+      "Regular meetings for military wives to provide emotional support, share experiences, and discuss ways to cope with deployment challenges.",
     location: "Online",
     time: "8PM Saturday, 7th October 2023",
     longDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
   {
-    id: "event4",
-    title: "Event 4",
+    id: 2,
+    title: "Welcome Home Celebration",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    interest: "Religion",
+      "Plan a warm welcome home party for military husbands returning from deployment. Decorate the house, prepare their favorite meal, and invite friends and family to join the celebration.",
     location: "Online",
     time: "8PM Saturday, 7th October 2023",
     longDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
   {
-    id: "event5",
-    title: "Event 5",
+    id: 3,
+    title: "Military Spouse Appreciation Day",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    interest: "Religion",
-    location: "Texas",
+      "Celebrate Military Spouse Appreciation Day (usually in May) by hosting an event where military wives can come together for fun activities, workshops, and pampering sessions.",
+    location: "Online",
     time: "8PM Saturday, 7th October 2023",
     longDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
   {
-    id: "event6",
-    title: "Event 6",
+    id: 4,
+    title: "Fitness and Wellness Workshop",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    interest: "Navy",
-    location: "Texas",
+      "Join our fitness and wellness workshop to stay healthy and reduce stress. All military wives are welcome to participate.",
+    location: "Online",
     time: "8PM Saturday, 7th October 2023",
     longDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
   {
-    id: "event7",
-    title: "Event 7",
+    id: 5,
+    title: "Career Development Seminar",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    interest: "Navy",
-    location: "Texas",
+      "Learn about career development, resume building, and job search strategies in our informative seminar for military spouses.",
+    location: "Online",
     time: "8PM Saturday, 7th October 2023",
     longDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
   {
-    id: "event8",
-    title: "Event 8",
+    id: 6,
+    title: "Children's Playdate",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    interest: "Navy",
-    location: "Texas",
+      "Bring your kids to our playdate event where they can socialize and have fun while you connect with other military spouses.",
+    location: "Online",
     time: "8PM Saturday, 7th October 2023",
     longDescription:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
+  },
+  {
+    id: 7,
+    title: "Community Service Project",
+    description:
+      "Join our community service project to give back to the local community and strengthen bonds among military families.",
+    location: "Online",
+    time: "8PM Saturday, 7th October 2023",
+    longDescription:
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
+  },
+  {
+    id: 8,
+    title: "Book Club Meeting",
+    description:
+      "Participate in our military spouse book club where we read and discuss books together, providing an opportunity for intellectual stimulation and socializing.",
+    location: "Online",
+    time: "8PM Saturday, 7th October 2023",
+    longDescription:
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
+  },
+  {
+    id: 9,
+    title: "Crafting and DIY Workshop",
+    description:
+      "Discover new crafting and DIY skills in our workshop sessions. Create handmade items and socialize with other military spouses.",
+    location: "Online",
+    time: "8PM Saturday, 7th October 2023",
+    longDescription:
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
+  },
+  {
+    id: 10,
+    title: "Cooking Class",
+    description:
+      "Join our cooking class to explore new recipes and cuisines. It's a great way to bond with other military wives over food.",
+    location: "Online",
+    time: "8PM Saturday, 7th October 2023",
+    longDescription:
+      "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
 ];
