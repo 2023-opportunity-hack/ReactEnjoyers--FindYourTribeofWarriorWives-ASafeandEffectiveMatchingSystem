@@ -52,8 +52,8 @@ export default function Carousel({ groups }) {
                   color='white'
                   marginTop='1rem'
                 >{`${g.description}`}</Text>
-                <Box marginTop={"1rem"}>
-                  <Button size='sm'>View Group</Button>
+                <Box marginTop={"1rem"} as={"a"} href={"/groups/1"}>
+                  <Button size='sm' marginTop={"1rem"}>View Group</Button>
                 </Box>
               </Box>
             </Box>

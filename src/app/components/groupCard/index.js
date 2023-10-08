@@ -36,9 +36,6 @@ export default function GroupCard({ name, location, tags, description, bg }) {
             ))}
           </HStack>
           <Text fontSize='sm'>{description}</Text>
-          <Button size='sm' as={"a"} href={"/groups/1"}>
-            Join group
-          </Button>
         </Stack>
       </CardBody>
     </Card>

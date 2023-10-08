@@ -15,7 +15,7 @@ export const events = [
     description:
       "Plan a warm welcome home party for military husbands returning from deployment. Decorate the house, prepare their favorite meal, and invite friends and family to join the celebration.",
     location: "Online",
-    time: "8PM Saturday, 7th October 2023",
+    time: "6PM Thursday, 13th October 2023",
     longDescription:
       "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
@@ -25,7 +25,7 @@ export const events = [
     description:
       "Celebrate Military Spouse Appreciation Day (usually in May) by hosting an event where military wives can come together for fun activities, workshops, and pampering sessions.",
     location: "Online",
-    time: "8PM Saturday, 7th October 2023",
+    time: "3PM Saturday, 22nd October 2023",
     longDescription:
       "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
@@ -35,7 +35,7 @@ export const events = [
     description:
       "Join our fitness and wellness workshop to stay healthy and reduce stress. All military wives are welcome to participate.",
     location: "Online",
-    time: "8PM Saturday, 7th October 2023",
+    time: "10AM Monday, 24th October 2023",
     longDescription:
       "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
@@ -45,7 +45,7 @@ export const events = [
     description:
       "Learn about career development, resume building, and job search strategies in our informative seminar for military spouses.",
     location: "Online",
-    time: "8PM Saturday, 7th October 2023",
+    time: "2PM Wednesday, 26th October 2023",
     longDescription:
       "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
@@ -55,7 +55,7 @@ export const events = [
     description:
       "Bring your kids to our playdate event where they can socialize and have fun while you connect with other military spouses.",
     location: "Online",
-    time: "8PM Saturday, 7th October 2023",
+    time: "11AM Friday, 28th October 2023",
     longDescription:
       "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
@@ -65,7 +65,7 @@ export const events = [
     description:
       "Join our community service project to give back to the local community and strengthen bonds among military families.",
     location: "Online",
-    time: "8PM Saturday, 7th October 2023",
+    time: "4PM Sunday, 30th October 2023",
     longDescription:
       "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
@@ -75,7 +75,7 @@ export const events = [
     description:
       "Participate in our military spouse book club where we read and discuss books together, providing an opportunity for intellectual stimulation and socializing.",
     location: "Online",
-    time: "8PM Saturday, 7th October 2023",
+    time: "9AM Tuesday, 1st November 2023",
     longDescription:
       "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
@@ -85,7 +85,7 @@ export const events = [
     description:
       "Discover new crafting and DIY skills in our workshop sessions. Create handmade items and socialize with other military spouses.",
     location: "Online",
-    time: "8PM Saturday, 7th October 2023",
+    time: "1PM Thursday, 3rd November 2023",
     longDescription:
       "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
@@ -95,8 +95,9 @@ export const events = [
     description:
       "Join our cooking class to explore new recipes and cuisines. It's a great way to bond with other military wives over food.",
     location: "Online",
-    time: "8PM Saturday, 7th October 2023",
+    time: "5PM Saturday, 5th November 2023",
     longDescription:
       "Deployment can be a stressful time for military wives. Join our support group to share your experiences and learn from others.",
   },
 ];
+
