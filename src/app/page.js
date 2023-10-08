@@ -47,7 +47,7 @@ export default function Home() {
           <Text>
             Your location: <b>Missouri</b>
           </Text>
-          <InputGroup size="md">
+          <InputGroup size="md" bg="white">
             <Input
               value={input}
               placeholder="Search for groups..."
@@ -63,6 +63,7 @@ export default function Home() {
               w="full"
               borderRadius="0 0 5px 5px"
               marginTop="-1rem"
+              bg="white"
             >
               {groups.map((g) => (
                 <>
