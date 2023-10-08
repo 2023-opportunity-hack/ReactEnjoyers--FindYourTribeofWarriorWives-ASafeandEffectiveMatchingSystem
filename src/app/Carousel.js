@@ -30,13 +30,14 @@ export default function Carousel({ groups }) {
                 position='relative'
                 zIndex={1}
               >
-                {g.online && <Tag colorScheme="blue">Online Only</Tag>}
+                {g.online && <Tag colorScheme="blue" marginRight="1rem">Online Only</Tag>}
+                <Tag colorScheme="orange">{g.name}</Tag>
                 <Text
                   heading
                   fontWeight={"bold"}
                   fontSize={"3rem"}
                   color='white'
-                >{`${g.service} Warrior Wives of ${g.location}`}</Text>
+                >{`${g.name} Warrior Wives of ${g.location}`}</Text>
                 <Text
                   fontWeight={"semibold"}
                   color='gray.200'

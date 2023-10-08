@@ -4,29 +4,34 @@ import {
   Text,
   InputGroup,
   Input,
-  InputRightElement,
   Flex,
+  InputLeftElement,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import Image from "next/image";
 import Carousel from "./Carousel";
 
 export default function Home() {
+  const handleInputChange = (e) => {
+
+  }
+
   return (
     <Box>
-      <Flex flexDir={"column"} gap='1rem' paddingX='5rem' marginBottom='1rem'>
-        <InputGroup size='lg'>
-          <Input placeholder='Search' />
-          <InputRightElement>
+      <Flex flexDir={"column"} gap='1rem' paddingX='10rem' marginBottom='1rem'>
+        <Text>Your location: <b>Missouri</b></Text>
+        <InputGroup size='md'>
+          <Input placeholder='Search for groups...' onChange={handleInputChange} />
+          <InputLeftElement>
             <SearchIcon></SearchIcon>
-          </InputRightElement>
+          </InputLeftElement>
         </InputGroup>
-        <Text heading fontSize={"2rem"} color='gray.800'>
+        {/* <Box border={"0.5px #CBD5E0 solid"} w="full" borderRadius="0 0 5px 5px">test</Box> */}
+        <Text heading fontSize={"2rem"} color='gray.800' marginTop="1rem">
           Recommended groups near you
         </Text>
       </Flex>
       <Carousel groups={RECOMMENDED_LOCAL_GROUPS} />
-      <Flex flexDir={"column"} gap='1rem' paddingX='5rem' marginY='1rem'>
+      <Flex flexDir={"column"} gap='1rem' paddingX='10rem' marginTop='2rem' marginBottom='1rem'>
         <Text heading fontSize={"2rem"} color='gray.800'>
           Recommended online groups for you
         </Text>
@@ -38,12 +43,11 @@ export default function Home() {
 
 const RECOMMENDED_LOCAL_GROUPS = [
   {
-    service: "Navy",
+    name: "Navy",
     location: "Springfield",
     tags: [
       { name: "Jogging", color: "red" },
       { name: "Tennis", color: "red" },
-      { name: "Christian", color: "blue" },
       { name: "Cooking", color: "green" },
     ],
     description:
@@ -51,27 +55,25 @@ const RECOMMENDED_LOCAL_GROUPS = [
     bg: "https://www.worldatlas.com/r/w1200-q80/upload/27/56/59/shutterstock-1507067762.jpg",
   },
   {
-    service: "Marine Corps",
+    name: "Marine Corps",
     location: "Kansas City",
     tags: [
       { name: "Football", color: "red" },
       { name: "Reading", color: "green" },
-      { name: "Baptist", color: "blue" },
-      { name: "Christian", color: "blue" },
     ],
     description:
       "Calling all Kansas City Marine Corps wives! Dive into our community of football enthusiasts and bookworms. Join us for meaningful connections and shared interests!",
     bg: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Downtown_-_panoramio_%2815%29.jpg/1200px-Downtown_-_panoramio_%2815%29.jpg",
   },
   {
-    service: "Air Force",
+    name: "Baptist",
     location: "St. Louis",
     tags: [
       { name: "Hiking", color: "red" },
       { name: "Painting", color: "green" },
     ],
     description:
-      "Kansas City Air Force wives, unite! Explore our world of hiking and painting enthusiasts. Connect, create, and embrace shared passions with us!",
+      "Kansas City Baptist wives, unite! Explore our world of hiking and painting enthusiasts. Connect, create, and embrace shared passions with us!",
     bg: "https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2017-02/0%20HERO_StLouis%20-%20shutterstock_166920155_Web72DPI_crop.jpg?h=58765dd8&itok=OgvAlZjy",
   },
 ];
@@ -79,14 +81,13 @@ const RECOMMENDED_LOCAL_GROUPS = [
 const RECOMMENDED_ONLINE_GROUPS = [
   {
     online: true,
-    service: "Marine Corps",
+    name: "Marine Corps",
     location: "Midwest",
     tags: [
       { name: "Hiking", color: "red" },
       { name: "Painting", color: "green" },
       { name: "Online Gaming", color: "green" },
       { name: "Book Club", color: "green" },
-      { name: "Christian", color: "blue" },
     ],
     description:
       "Midwest Marine Corps spouses, discover the great outdoors with our hiking and painting enthusiasts. Join us for gaming and book club fun!",
@@ -94,10 +95,9 @@ const RECOMMENDED_ONLINE_GROUPS = [
   },
   {
     online: true,
-    service: "Navy",
+    name: "Navy",
     location: "West Coast",
     tags: [
-      { name: "Jewish", color: "blue" },
       { name: "Cooking", color: "green" },
       { name: "Travel", color: "green" },
     ],

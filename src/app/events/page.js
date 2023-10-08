@@ -2,7 +2,7 @@
 
 import React from "react";
 import EventCard from "../components/eventCard";
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Heading } from "@chakra-ui/react";
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Text } from "@chakra-ui/react";
 import LongEventCard from "../components/longEventCard";
 import { events } from "../../../content";
 
@@ -23,7 +23,7 @@ export default function Events() {
 
   return (
     <div className="max-w-[1200px] m-auto">
-      <Heading className="mb-4">Explore events near you</Heading>
+    <Text heading fontSize={"2rem"} color='gray.800'>Explore events near you</Text>
 
       <Tabs variant="soft-rounded" colorScheme="orange">
         <TabList>
