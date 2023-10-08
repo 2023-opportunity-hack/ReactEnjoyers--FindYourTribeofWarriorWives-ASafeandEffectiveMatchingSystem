@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 
-
 const ListHeader = ({ children }) => {
   return (
     <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
@@ -48,57 +47,34 @@ const SocialButton = ({ children, label, href }) => {
 
 export default function Footer() {
   return (
-    <Box
-      bg="white"
-      color={useColorModeValue("gray.700", "gray.200")}
-    >
+    <Box bg='white' color={useColorModeValue("gray.700", "gray.200")}>
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={"flex-start"}>
-            <ListHeader>Company</ListHeader>
-            <Box as="a" href={"#"}>
+            <ListHeader>Warrior Wives</ListHeader>
+            <Box as='a' href={"https://www.usawarriorwives.org/about_us"}>
               About Us
             </Box>
-            <Box as="a" href={"#"}>
-              Blog
-            </Box>
-            <Box as="a" href={"#"}>
-              Careers
-            </Box>
-            <Box as="a" href={"#"}>
+            <Box as='a' href={"https://www.usawarriorwives.org/contact-us"}>
               Contact Us
             </Box>
           </Stack>
-
           <Stack align={"flex-start"}>
-            <ListHeader>Support</ListHeader>
-            <Box as="a" href={"#"}>
-              Help Center
+            <ListHeader>Warrior Wives</ListHeader>
+            <Box>
+              <Box fontWeight={"semibold"}>
+              Phone: 
+              </Box>
+              417-319-6780
             </Box>
-            <Box as="a" href={"#"}>
-              Safety Center
-            </Box>
-            <Box as="a" href={"#"}>
-              Community Guidelines
+            <Box>
+              <Box fontWeight={"semibold"}>
+              Mailing Address:
+              </Box>
+              Warrior Wives 9998 Academic Avenue #1009 Point
+              Lookout, Missouri 65726-1009
             </Box>
           </Stack>
-
-          <Stack align={"flex-start"}>
-            <ListHeader>Legal</ListHeader>
-            <Box as="a" href={"#"}>
-              Cookies Policy
-            </Box>
-            <Box as="a" href={"#"}>
-              Privacy Policy
-            </Box>
-            <Box as="a" href={"#"}>
-              Terms of Service
-            </Box>
-            <Box as="a" href={"#"}>
-              Law Enforcement
-            </Box>
-          </Stack>
-
         </SimpleGrid>
       </Container>
 
@@ -116,7 +92,9 @@ export default function Footer() {
           justify={{ md: "space-between" }}
           align={{ md: "center" }}
         >
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text>
+            © 2023 ReactEnjoyers for Warrior Wives. All rights reserved
+          </Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
               <FaTwitter />

@@ -22,6 +22,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import Image from "next/image";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -53,15 +54,15 @@ export default function NavBar() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-          >
-            Logo
-          </Text>
-
+        <Flex
+          flex={{ base: 1 }}
+          justify={{ base: "center", md: "start" }}
+          alignItems={"center"}
+          marginLeft={{ base: "0", md: "2rem" }}
+        >
+          <Box as='a' href='/'>
+            <Image src='/logo.png' width={50} height={50} />
+          </Box>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
@@ -118,7 +119,7 @@ const DesktopNav = () => {
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Box
-                as="a"
+                as='a'
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"sm"}
@@ -159,7 +160,7 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Box
-      as="a"
+      as='a'
       href={href}
       role={"group"}
       display={"block"}
@@ -215,10 +216,10 @@ const MobileNavItem = ({ label, children, href }) => {
     <Stack spacing={4} onClick={children && onToggle}>
       <Box
         py={2}
-        as="a"
+        as='a'
         href={href ?? "#"}
-        justifyContent="space-between"
-        alignItems="center"
+        justifyContent='space-between'
+        alignItems='center'
         _hover={{
           textDecoration: "none",
         }}
@@ -251,7 +252,7 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {children &&
             children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
+              <Box as='a' key={child.label} py={2} href={child.href}>
                 {child.label}
               </Box>
             ))}
