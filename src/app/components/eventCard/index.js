@@ -58,20 +58,22 @@ export default function EventCard(props) {
               </Text>
             </Stack>
           </Stack>
-
-          <Button
-            w={"full"}
-            mt={8}
-            bg={useColorModeValue("#151f21", "gray.900")}
-            color={"white"}
-            rounded={"md"}
-            _hover={{
-              transform: "translateY(-2px)",
-              boxShadow: "lg",
-            }}
-          >
-            <Link href={`events/${id}`}>Follow</Link>
-          </Button>
+          
+          <Link href={`events/${id}`}>
+            <Button
+              w={"full"}
+              mt={8}
+              bg={useColorModeValue("#151f21", "gray.900")}
+              color={"white"}
+              rounded={"md"}
+              _hover={{
+                transform: "translateY(-2px)",
+                boxShadow: "lg",
+              }}
+            >
+              Follow
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Center>
