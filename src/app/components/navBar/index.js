@@ -269,8 +269,12 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "All Groups",
+    label: "My Groups",
     href: "/groups",
+  },
+  {
+    label: "My Events",
+    href: "/events",
     // children: [
     //   {
     //     label: "Explore Design Work",
@@ -283,10 +287,6 @@ const NAV_ITEMS = [
     //     href: "#",
     //   },
     // ],
-  },
-  {
-    label: "My Groups",
-    href: "/groups",
   },
   {
     label: "About Us",
