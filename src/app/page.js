@@ -1,4 +1,5 @@
 "use client";
+import React, { useState } from "react";
 import {
   Box,
   Text,
@@ -6,32 +7,76 @@ import {
   Input,
   Flex,
   InputLeftElement,
+  Divider,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import Carousel from "./Carousel";
 
 export default function Home() {
-  const handleInputChange = (e) => {
+  const [input, setInput] = useState("");
+  const [groups, setGroups] = useState([]);
+  const totalGroups = [
+    ...RECOMMENDED_LOCAL_GROUPS,
+    ...RECOMMENDED_ONLINE_GROUPS,
+  ];
 
-  }
+  const handleInputChange = (e) => {
+    setInput(e.target.value);
+    setGroups(
+      totalGroups.filter(
+        (g) =>
+          g.name.toLowerCase().includes(e.target.value) ||
+          g.location.toLowerCase().includes(e.target.value)
+      )
+    );
+    console.log(groups);
+  };
 
   return (
     <Box>
       <Flex flexDir={"column"} gap='1rem' paddingX='10rem' marginBottom='1rem'>
-        <Text>Your location: <b>Missouri</b></Text>
+        <Text>
+          Your location: <b>Missouri</b>
+        </Text>
         <InputGroup size='md'>
-          <Input placeholder='Search for groups...' onChange={handleInputChange} />
+          <Input
+            value={input}
+            placeholder='Search for groups...'
+            onChange={handleInputChange}
+          />
           <InputLeftElement>
             <SearchIcon></SearchIcon>
           </InputLeftElement>
         </InputGroup>
-        {/* <Box border={"0.5px #CBD5E0 solid"} w="full" borderRadius="0 0 5px 5px">test</Box> */}
-        <Text heading fontSize={"2rem"} color='gray.800' marginTop="1rem">
+        {input && (
+          <Box
+            border={"1px #CBD5E075 solid"}
+            w='full'
+            borderRadius='0 0 5px 5px'
+            marginTop='-1rem'
+          >
+            {groups.map((g) => (
+              <>
+                <Box paddingX={"1rem"} paddingY={"0.5rem"} cursor={"pointer"}>
+                  {g.name} Warrior Wives of {g.location}
+                </Box>
+                <Divider />
+              </>
+            ))}
+          </Box>
+        )}
+        <Text heading fontSize={"2rem"} color='gray.800' marginTop='1rem'>
           Recommended groups near you
         </Text>
       </Flex>
       <Carousel groups={RECOMMENDED_LOCAL_GROUPS} />
-      <Flex flexDir={"column"} gap='1rem' paddingX='10rem' marginTop='2rem' marginBottom='1rem'>
+      <Flex
+        flexDir={"column"}
+        gap='1rem'
+        paddingX='10rem'
+        marginTop='2rem'
+        marginBottom='1rem'
+      >
         <Text heading fontSize={"2rem"} color='gray.800'>
           Recommended online groups for you
         </Text>
