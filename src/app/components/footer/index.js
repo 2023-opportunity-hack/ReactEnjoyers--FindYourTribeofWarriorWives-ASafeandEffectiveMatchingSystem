@@ -60,7 +60,6 @@ export default function Footer() {
             </Box>
           </Stack>
           <Stack align={"flex-start"}>
-            <ListHeader>Warrior Wives</ListHeader>
             <Box>
               <Box fontWeight={"semibold"}>
               Phone: 

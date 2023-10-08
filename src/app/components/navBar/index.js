@@ -61,7 +61,7 @@ export default function NavBar() {
           marginLeft={{ base: "0", md: "2rem" }}
         >
           <Box as='a' href='/'>
-            <Image src='/logo.png' width={50} height={50} />
+            <Image src='/logo.png' width={50} height={50} alt="logo" />
           </Box>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
