@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import EventCard from "../components/eventCard";
@@ -18,7 +18,7 @@ function getAllUniqueInterests(events) {
   return uniqueInterestsArray;
 }
 
-export default function Events() {
+export default function GroupEvents() {
   const uniqueInterests = getAllUniqueInterests(events);
 
   return (

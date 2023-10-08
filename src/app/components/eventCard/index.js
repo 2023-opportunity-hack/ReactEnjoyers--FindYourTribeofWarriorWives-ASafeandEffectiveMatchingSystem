@@ -19,7 +19,7 @@ export default function EventCard(props) {
   return (
     <Center py={6}>
       <Box
-        maxW={"270px"}
+        maxW={"320px"}
         w={"full"}
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={"2xl"}
@@ -59,7 +59,7 @@ export default function EventCard(props) {
             </Stack>
           </Stack>
 
-          <Link href={`events/${id}`}>
+          <Link href={`groups/${id}`}>
             <Button
               colorScheme="orange"
               w={"full"}
