@@ -3,28 +3,44 @@
 import {
   Flex,
   Box,
-  FormControl,
-  FormLabel,
-  Input,
-  Checkbox,
   Stack,
-  Button,
   Heading,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { Link as ChakraLink } from "@chakra-ui/react";
+import Image from "next/image";
+import Link from "next/link";
+
+const sandboxClientId = "e179e357750320e2e652c80b61c4dc02";
+const sandboxRedirectUri = "https://0t3e4.csb.app/sandbox/callback";
+const responseType = "token";
+const scopes = ["identity", "military_us"].join(",");
+
+const groupsEndpoint = () => {
+  const endpoint = "https://groups.id.me";
+  const parameters = [
+    `client_id=${sandboxClientId}`,
+    `redirect_uri=${sandboxRedirectUri}`,
+    `response_type=${responseType}`,
+    `scopes=${scopes}`,
+  ];
+  parameters.push(`sandbox=true`);
+
+  return `${endpoint}?${parameters.join("&")}`;
+};
 
 export default function Login() {
   return (
     <Flex
-      minH={"100vh"}
+      minH={"80vh"}
       align={"center"}
       justify={"center"}
       bg={useColorModeValue("gray.50", "gray.800")}
     >
       <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
         <Stack align={"center"}>
-          <Heading fontSize={"4xl"}>Sign in to your account</Heading>
+          <Heading fontSize={"2xl"}>Sign in to your account</Heading>
         </Stack>
         <Box
           rounded={"lg"}
@@ -33,32 +49,40 @@ export default function Login() {
           p={8}
         >
           <Stack spacing={4}>
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" />
-            </FormControl>
-            <FormControl id="password">
-              <FormLabel>Password</FormLabel>
-              <Input type="password" />
-            </FormControl>
-            <Stack spacing={10}>
-              <Stack
-                direction={{ base: "column", sm: "row" }}
-                align={"start"}
-                justify={"space-between"}
+            <Stack spacing={5} justify={"center"} align={"center"}>
+              {/* <Image
+              width={100}
+              height={50}
+                src={
+                  "https://s3.amazonaws.com/idme-design/brand-assets/Primary-IDme-Logo-RGB.png"
+                }
+                alt="ID.me Logo"
+              /> */}
+              <Heading fontSize={"xl"}>Welcome to Warrior Wives!</Heading>
+              <Link href={groupsEndpoint()}>
+                <Image
+                  width={300}
+                  height={50}
+                  src="https://s3.amazonaws.com/idme/buttons/v4/verify-with-idme-green.png"
+                  alt="Verify with ID.me"
+                  className="responsive-img"
+                />
+              </Link>
+              <Text fontSize="sm">
+                ID.me is a trusted technology partner in helping to keep your
+                personal information safe. We specialize in digital identity
+                protection and help partners make sure you&#39;re you—and not
+                someone pretending to be you—before giving you access to your
+                information or offer.
+              </Text>
+              <ChakraLink
+                href={"https://www.id.me/about"}
+                target="_blank"
+                rel="noreferrer"
+                color={"blue.400"}
               >
-                <Checkbox>Remember me</Checkbox>
-                <Text color={"blue.400"}>Forgot password?</Text>
-              </Stack>
-              <Button
-                bg={"blue.400"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-              >
-                Sign in
-              </Button>
+                Learn more about ID.me
+              </ChakraLink>
             </Stack>
           </Stack>
         </Box>
