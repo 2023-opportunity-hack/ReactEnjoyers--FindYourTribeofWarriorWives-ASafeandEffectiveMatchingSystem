@@ -23,8 +23,10 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
+  const pathname = usePathname();
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -61,7 +63,7 @@ export default function NavBar() {
           marginLeft={{ base: "0", md: "2rem" }}
         >
           <Box as='a' href='/'>
-            <Image src='/logo.png' width={50} height={50} alt="logo" />
+            <Image src='/logo.png' width={50} height={50} alt='logo' />
           </Box>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -74,29 +76,32 @@ export default function NavBar() {
           direction={"row"}
           spacing={6}
         >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href={"#"}
-          >
-            Sign In
-          </Button>
-          <Button
-            as={"a"}
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"orange.400"}
-            href={"#"}
-            _hover={{
-              bg: "orange.300",
-            }}
-          >
-            Sign Up
-          </Button>
+          {pathname !== "/register" ? (
+            <Button
+              as={"a"}
+              fontSize={"sm"}
+              fontWeight={400}
+              variant={"link"}
+              href={"#"}
+            >
+              warriorWivesAdmin
+            </Button>
+          ) : (
+            <Button
+              as={"a"}
+              display={{ base: "none", md: "inline-flex" }}
+              fontSize={"sm"}
+              fontWeight={600}
+              color={"white"}
+              bg={"orange.400"}
+              href={"#"}
+              _hover={{
+                bg: "orange.300",
+              }}
+            >
+              Sign Up
+            </Button>
+          )}
         </Stack>
       </Flex>
 
