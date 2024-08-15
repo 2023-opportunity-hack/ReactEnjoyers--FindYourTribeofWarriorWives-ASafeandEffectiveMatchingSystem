@@ -1,3 +1,4 @@
+This project has been migrated to [github.com/warriorwivestech/warriorwives](https://github.com/warriorwivestech/warriorwives)
 
 # 2023_fall Hackathon
 https://hack.ohack.dev
